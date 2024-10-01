@@ -475,7 +475,3 @@ Here are some general guidelines for choosing the right structure (based on thei
  
 Choosing an inappropriate data structure could lead to low efficiency when running code, security issues, and data loss.  Choose wisely!
 
-
-```python
-
-```
