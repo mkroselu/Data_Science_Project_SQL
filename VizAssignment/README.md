@@ -118,19 +118,7 @@ sales_by_state
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -414,31 +402,9 @@ top['category'] = ['Top']*5
 top
 ```
 
-    /usr/local/lib/python3.7/site-packages/ipykernel_launcher.py:3: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-      This is separate from the ipykernel package so we can avoid doing imports until
-    
-
-
-
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -497,19 +463,7 @@ bottom
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -566,19 +520,7 @@ all_state
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -662,33 +604,9 @@ g = sns.catplot(x ='state', y ='total_sales_amount', data = all_state, kind = 'b
 g.set(yticklabels=[1000, 3000, 6000, 20000, 30000, 5000000, 10000000, 16000000])
 ```
 
-
-
-
-    <Figure size 640x480 with 0 Axes>
-
-
-
-    /usr/local/lib/python3.7/site-packages/seaborn/axisgrid.py:38: UserWarning: FixedFormatter should only be used together with FixedLocator
-      ax.set(**kwargs)
-    
-
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x7f052eacb128>
-
-
-
-
-    <Figure size 640x480 with 0 Axes>
-
-
-
     
 ![png](output_11_4.png)
     
-
 
 
 ```python
@@ -726,84 +644,6 @@ plt.bar(list(bottom['state']), list(bottom['total_sales_amount']))
 plt.tight_layout()
 plt.show()
 ```
-
-
-
-
-    <Figure size 640x480 with 0 Axes>
-
-
-
-
-
-
-    <AxesSubplot:>
-
-
-
-
-
-
-    Text(0.5, 1.0, 'Top 5 States')
-
-
-
-
-
-
-    Text(0.5, 0, 'State')
-
-
-
-
-
-
-    Text(0, 0.5, 'Total Sales Amount (10 Million)')
-
-
-
-
-
-
-    <BarContainer object of 5 artists>
-
-
-
-
-
-
-    <AxesSubplot:>
-
-
-
-
-
-
-    Text(0.5, 1.0, 'Bottom 5 States')
-
-
-
-
-
-
-    Text(0.5, 0, 'State')
-
-
-
-
-
-
-    Text(0, 0.5, 'Total Sales Amount')
-
-
-
-
-
-
-    <BarContainer object of 5 artists>
-
-
-
 
     
 ![png](output_12_11.png)
@@ -848,19 +688,7 @@ cumulative_sales_by_dealership
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -962,14 +790,6 @@ cumulative_sales_by_dealership
 sns.lineplot(data=cumulative_sales_by_dealership, x="sales_transaction_date", y = "cumulative_sales", hue="dealership_id", style="state")
 ```
 
-
-
-
-    <AxesSubplot:xlabel='sales_transaction_date', ylabel='cumulative_sales'>
-
-
-
-
     
 ![png](output_16_1.png)
     
@@ -1020,19 +840,7 @@ prop_scoot
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1159,21 +967,6 @@ plt.legend(handles=[pop_a,pop_b])
 plt.show()
 ```
 
-
-
-
-    [Text(0.5, 0, 'State'), Text(0, 0.5, 'Sales in dollars')]
-
-
-
-
-
-
-    <matplotlib.legend.Legend at 0x7f0905080438>
-
-
-
-
     
 ![png](output_20_2.png)
     
@@ -1206,10 +999,6 @@ For each of the following questions, answer in as much preciseness and clarity t
 1. (Part 1) What are some potential hypotheses as to why the top 5 performing states have the highest sales amounts?  Describe how you would test your hypotheses in further analysis.  Do not conduct any additional analyses or write any more queries, just describe in words.
 
 The residents living in top 5 performing states might have higher incomes than other states. Also, the population of the top 5 states might be growing faster than other states. Thus, incomes, population and populatin growth rate for the top 5 performing states might be examined to test the hypotheses in further analysis. 
-
-
-
-
 
 
 
