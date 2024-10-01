@@ -914,19 +914,7 @@ df
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -979,19 +967,7 @@ df
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1038,19 +1014,7 @@ df
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1168,19 +1132,7 @@ df_spring
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1216,19 +1168,7 @@ df.iloc[[0,1], [1,2]]
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1267,19 +1207,7 @@ df
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1329,19 +1257,7 @@ df
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1395,19 +1311,7 @@ df
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1476,19 +1380,7 @@ df
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1544,19 +1436,7 @@ df
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1633,19 +1513,7 @@ df
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1732,19 +1600,7 @@ housing_df.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1872,19 +1728,7 @@ housing_df.describe()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2110,19 +1954,7 @@ housing_df.isnull()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2373,19 +2205,7 @@ housing_df.loc[:, housing_df.isnull().any()].describe()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2571,35 +2391,6 @@ plt.show()
 
 
 
-
-    (array([ 21.,  55.,  82., 154.,  84.,  41.,  30.,   8.,  10.,  21.]),
-     array([ 5. ,  9.5, 14. , 18.5, 23. , 27.5, 32. , 36.5, 41. , 45.5, 50. ]),
-     <BarContainer object of 10 artists>)
-
-
-
-
-
-
-    Text(0.5, 1.0, 'Median Boston Housing Prices')
-
-
-
-
-
-
-    Text(0.5, 0, '1980 Median Value in Thousands')
-
-
-
-
-
-
-    Text(0, 0.5, 'Count')
-
-
-
-
     
 ![png](output_87_4.png)
     
@@ -2617,44 +2408,6 @@ plt.savefig(title, dpi=300)
 plt.show()
 ```
 
-
-
-
-    <Figure size 1000x600 with 0 Axes>
-
-
-
-
-
-
-    (array([ 21.,  55.,  82., 154.,  84.,  41.,  30.,   8.,  10.,  21.]),
-     array([ 5. ,  9.5, 14. , 18.5, 23. , 27.5, 32. , 36.5, 41. , 45.5, 50. ]),
-     <BarContainer object of 10 artists>)
-
-
-
-
-
-
-    Text(0.5, 1.0, 'Median Boston Housing Prices')
-
-
-
-
-
-
-    Text(0.5, 0, '1980 Median Value in Thousands')
-
-
-
-
-
-
-    Text(0, 0.5, 'Count')
-
-
-
-
     
 ![png](output_88_5.png)
     
@@ -2667,14 +2420,6 @@ y = housing_df['MEDV']
 plt.scatter(x, y)
 plt.show()
 ```
-
-
-
-
-    <matplotlib.collections.PathCollection at 0x7f8c9ba2f748>
-
-
-
 
     
 ![png](output_89_1.png)
@@ -2690,19 +2435,7 @@ housing_df.corr()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2977,21 +2710,6 @@ yticklabels=corr.columns.values, cmap="Blues", linewidths=1.25, alpha=0.8)
 plt.show()
 ```
 
-
-
-
-    <Figure size 800x600 with 0 Axes>
-
-
-
-
-
-
-    <AxesSubplot:>
-
-
-
-
     
 ![png](output_91_2.png)
     
@@ -3006,20 +2724,6 @@ plt.show()
 ```
 
 
-
-
-    {'whiskers': [<matplotlib.lines.Line2D at 0x7f8c9ba63240>,
-      <matplotlib.lines.Line2D at 0x7f8c701ed780>],
-     'caps': [<matplotlib.lines.Line2D at 0x7f8c701eda58>,
-      <matplotlib.lines.Line2D at 0x7f8c701edd30>],
-     'boxes': [<matplotlib.lines.Line2D at 0x7f8c701ed208>],
-     'medians': [<matplotlib.lines.Line2D at 0x7f8c7028ac88>],
-     'fliers': [<matplotlib.lines.Line2D at 0x7f8c701edcf8>],
-     'means': []}
-
-
-
-
     
 ![png](output_92_1.png)
     
@@ -3030,16 +2734,6 @@ plt.show()
 plt.violinplot(x) 
 plt.show() 
 ```
-
-
-
-
-    {'bodies': [<matplotlib.collections.PolyCollection at 0x7f8c701bae80>],
-     'cmaxes': <matplotlib.collections.LineCollection at 0x7f8c701bae48>,
-     'cmins': <matplotlib.collections.LineCollection at 0x7f8c701bad68>,
-     'cbars': <matplotlib.collections.LineCollection at 0x7f8c70251208>}
-
-
 
 
     
@@ -3053,20 +2747,6 @@ plt.figure(figsize=(10, 7))
 sns.regplot(x='RM',y='MEDV',data=housing_df) 
 plt.show() 
 ```
-
-
-
-
-    <Figure size 1000x700 with 0 Axes>
-
-
-
-
-
-
-    <AxesSubplot:xlabel='RM', ylabel='MEDV'>
-
-
 
 
     
@@ -3172,6 +2852,3 @@ v = M[0]
 ```
 
 
-```python
-
-```
