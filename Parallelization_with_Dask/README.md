@@ -236,124 +236,22 @@ for chunk in pd.read_csv('HTRU_2.csv',header=None,chunksize=1000):
 
 
     (777, 9)
-
-
-
-
-
-
     (767, 9)
-
-
-
-
-
-
     (753, 9)
-
-
-
-
-
-
     (647, 9)
-
-
-
-
-
-
     (701, 9)
-
-
-
-
-
-
     (678, 9)
-
-
-
-
-
-
     (833, 9)
-
-
-
-
-
-
     (717, 9)
-
-
-
-
-
-
     (792, 9)
-
-
-
-
-
-
     (746, 9)
-
-
-
-
-
-
     (768, 9)
-
-
-
-
-
-
     (705, 9)
-
-
-
-
-
-
     (806, 9)
-
-
-
-
-
-
     (774, 9)
-
-
-
-
-
-
     (829, 9)
-
-
-
-
-
-
     (812, 9)
-
-
-
-
-
-
     (824, 9)
-
-
-
-
-
-
     (708, 9)
 
 
@@ -372,30 +270,11 @@ large_mean_df.shape
 large_mean_df
 ```
 
-
-
-
     (13637, 9)
 
 
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead tr th {
-        text-align: left;
-    }
-</style>
+<div> 
 <table border="1" class="dataframe">
   <thead>
     <tr>
@@ -570,29 +449,10 @@ large_mean_df
 ```
 
 
-
-
     (13637, 9)
 
 
-
-
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead tr th {
-        text-align: left;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr>
@@ -771,11 +631,8 @@ sum(chunksum) #no computation done until this step
 ```
 
 
-
-
     Mean of integrated profile    1.662753e+06
     dtype: float64
-
 
 
 No actual computation is done until we iterate over the chained generators explicitly (in this case, by applying the function sum to the chunk sums). To reiterate - no reading or work is done until the very last step.
@@ -810,24 +667,9 @@ sum(chunkclass1)
 chunks
 ```
 
-
-
-
-    <generator object <genexpr> at 0x7f773f607a50>
-
-
-
-
 ```python
 chunkclass1
 ```
-
-
-
-
-    <generator object <genexpr> at 0x7f773f661510>
-
-
 
 The generators chunks and chunksum persist after the computation. However, they have been consumed at this point. That is, trying to next function on either produces a **StopIteration** exception (which tells users that the generator is exhausted).
 
@@ -836,13 +678,6 @@ The generators chunks and chunksum persist after the computation. However, they 
 chunksum
 #next(chunksum)
 ```
-
-
-
-
-    <generator object <genexpr> at 0x7fd8817546d0>
-
-
 
 
 ```python
@@ -855,14 +690,8 @@ next(chunksum) # second of two chunks
 ```
 
 
-
-
     Mean of integrated profile    902529.609375
     dtype: float64
-
-
-
-
 
 
     Mean of integrated profile    760223.460938
@@ -978,19 +807,7 @@ annual_totals['n_long']/annual_totals['n_total']
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1010,25 +827,13 @@ annual_totals['n_long']/annual_totals['n_total']
 </div>
 
 
-
-
-
-
     0    0.149572
     dtype: float64
-
-
 
 
 ```python
 totals
 ```
-
-
-
-
-    <generator object <genexpr> at 0x7f773f1cacf0>
-
 
 
 # 5. Now with Dask delayed!
@@ -1257,19 +1062,7 @@ annual_totals['n_long']/annual_totals['n_total']
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1376,72 +1169,7 @@ a_dask
 
 
 
-    ((2500, 2500, 2500, 2500),)
-
-
-
-
-
-
-<table>
-    <tr>
-        <td>
-            <table style="border-collapse: collapse;">
-                <thead>
-                    <tr>
-                        <td> </td>
-                        <th> Array </th>
-                        <th> Chunk </th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                    <tr>
-                        <th> Bytes </th>
-                        <td> 78.12 kiB </td>
-                        <td> 19.53 kiB </td>
-                    </tr>
-
-                    <tr>
-                        <th> Shape </th>
-                        <td> (10000,) </td>
-                        <td> (2500,) </td>
-                    </tr>
-                    <tr>
-                        <th> Dask graph </th>
-                        <td colspan="2"> 4 chunks in 1 graph layer </td>
-                    </tr>
-                    <tr>
-                        <th> Data type </th>
-                        <td colspan="2"> float64 numpy.ndarray </td>
-                    </tr>
-                </tbody>
-            </table>
-        </td>
-        <td>
-        <svg width="170" height="75" style="stroke:rgb(0,0,0);stroke-width:1" >
-
-  <!-- Horizontal lines -->
-  <line x1="0" y1="0" x2="120" y2="0" style="stroke-width:2" />
-  <line x1="0" y1="25" x2="120" y2="25" style="stroke-width:2" />
-
-  <!-- Vertical lines -->
-  <line x1="0" y1="0" x2="0" y2="25" style="stroke-width:2" />
-  <line x1="30" y1="0" x2="30" y2="25" />
-  <line x1="60" y1="0" x2="60" y2="25" />
-  <line x1="90" y1="0" x2="90" y2="25" />
-  <line x1="120" y1="0" x2="120" y2="25" style="stroke-width:2" />
-
-  <!-- Colored Rectangle -->
-  <polygon points="0.0,0.0 120.0,0.0 120.0,25.412616514582485 0.0,25.412616514582485" style="fill:#ECB172A0;stroke-width:0"/>
-
-  <!-- Text -->
-  <text x="60.000000" y="45.412617" font-size="1.0rem" font-weight="100" text-anchor="middle" >10000</text>
-  <text x="140.000000" y="12.706308" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(0,140.000000,12.706308)">1</text>
-</svg>
-        </td>
-    </tr>
-</table>
+    ((2500, 2500, 2500, 2500),) 
 
 
 
@@ -1473,51 +1201,6 @@ result = a_dask.sum()
 result
 print(result.compute())
 ```
-
-
-
-
-<table>
-    <tr>
-        <td>
-            <table style="border-collapse: collapse;">
-                <thead>
-                    <tr>
-                        <td> </td>
-                        <th> Array </th>
-                        <th> Chunk </th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                    <tr>
-                        <th> Bytes </th>
-                        <td> 8 B </td>
-                        <td> 8 B </td>
-                    </tr>
-
-                    <tr>
-                        <th> Shape </th>
-                        <td> () </td>
-                        <td> () </td>
-                    </tr>
-                    <tr>
-                        <th> Dask graph </th>
-                        <td colspan="2"> 1 chunks in 3 graph layers </td>
-                    </tr>
-                    <tr>
-                        <th> Data type </th>
-                        <td colspan="2"> float64 numpy.ndarray </td>
-                    </tr>
-                </tbody>
-            </table>
-        </td>
-        <td>
-
-        </td>
-    </tr>
-</table>
-
 
 
     5018.3703279356605
@@ -1734,51 +1417,6 @@ x_dask.min()
 
 
 
-
-<table>
-    <tr>
-        <td>
-            <table style="border-collapse: collapse;">
-                <thead>
-                    <tr>
-                        <td> </td>
-                        <th> Array </th>
-                        <th> Chunk </th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                    <tr>
-                        <th> Bytes </th>
-                        <td> 8 B </td>
-                        <td> 8 B </td>
-                    </tr>
-
-                    <tr>
-                        <th> Shape </th>
-                        <td> () </td>
-                        <td> () </td>
-                    </tr>
-                    <tr>
-                        <th> Dask graph </th>
-                        <td colspan="2"> 1 chunks in 6 graph layers </td>
-                    </tr>
-                    <tr>
-                        <th> Data type </th>
-                        <td colspan="2"> float64 numpy.ndarray </td>
-                    </tr>
-                </tbody>
-            </table>
-        </td>
-        <td>
-
-        </td>
-    </tr>
-</table>
-
-
-
-
 ```python
 x_dask.min().compute()
 x_dask.max().compute()
@@ -1791,19 +1429,10 @@ x_dask.mean().compute()
     nan
 
 
-
-
-
-
     nan
 
 
-
-
-
-
     nan
-
 
 
 
@@ -1844,189 +1473,6 @@ plt.suptitle('Monthly averages (max. daily temperature [C])');
 plt.colorbar(im, ax=panels.ravel().tolist()); #common colorbar
 plt.show()
 ```
-
-
-
-
-    Text(0.5, 1.0, '2008-01')
-
-
-
-
-
-
-    (-0.5, 921.5, -0.5, 443.5)
-
-
-
-
-
-
-    Text(0.5, 1.0, '2008-02')
-
-
-
-
-
-
-    (-0.5, 921.5, -0.5, 443.5)
-
-
-
-
-
-
-    Text(0.5, 1.0, '2008-03')
-
-
-
-
-
-
-    (-0.5, 921.5, -0.5, 443.5)
-
-
-
-
-
-
-    Text(0.5, 1.0, '2008-04')
-
-
-
-
-
-
-    (-0.5, 921.5, -0.5, 443.5)
-
-
-
-
-
-
-    Text(0.5, 1.0, '2008-05')
-
-
-
-
-
-
-    (-0.5, 921.5, -0.5, 443.5)
-
-
-
-
-
-
-    Text(0.5, 1.0, '2008-06')
-
-
-
-
-
-
-    (-0.5, 921.5, -0.5, 443.5)
-
-
-
-
-
-
-    Text(0.5, 1.0, '2008-07')
-
-
-
-
-
-
-    (-0.5, 921.5, -0.5, 443.5)
-
-
-
-
-
-
-    Text(0.5, 1.0, '2008-08')
-
-
-
-
-
-
-    (-0.5, 921.5, -0.5, 443.5)
-
-
-
-
-
-
-    Text(0.5, 1.0, '2008-09')
-
-
-
-
-
-
-    (-0.5, 921.5, -0.5, 443.5)
-
-
-
-
-
-
-    Text(0.5, 1.0, '2008-10')
-
-
-
-
-
-
-    (-0.5, 921.5, -0.5, 443.5)
-
-
-
-
-
-
-    Text(0.5, 1.0, '2008-11')
-
-
-
-
-
-
-    (-0.5, 921.5, -0.5, 443.5)
-
-
-
-
-
-
-    Text(0.5, 1.0, '2008-12')
-
-
-
-
-
-
-    (-0.5, 921.5, -0.5, 443.5)
-
-
-
-
-
-
-    Text(0.5, 0.98, 'Monthly averages (max. daily temperature [C])')
-
-
-
-
-
-
-    <matplotlib.colorbar.Colorbar at 0x7fd8805d5850>
-
-
-
 
     
 ![png](output_86_26.png)
@@ -2168,19 +1614,7 @@ len(cabdata)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2333,19 +1767,7 @@ len(cabdata)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2714,356 +2136,6 @@ client # dashboard: monitor how the cluster is used in real time-> track the per
 
 
 
-
-<div>
-    <div style="width: 24px; height: 24px; background-color: #e1e1e1; border: 3px solid #9D9D9D; border-radius: 5px; position: absolute;"> </div>
-    <div style="margin-left: 48px;">
-        <h3 style="margin-bottom: 0px;">Client</h3>
-        <p style="color: #9D9D9D; margin-bottom: 0px;">Client-253863a2-7b50-11ed-800b-0242ac120004</p>
-        <table style="width: 100%; text-align: left;">
-
-        <tr>
-
-            <td style="text-align: left;"><strong>Connection method:</strong> Cluster object</td>
-            <td style="text-align: left;"><strong>Cluster type:</strong> distributed.LocalCluster</td>
-
-        </tr>
-
-
-            <tr>
-                <td style="text-align: left;">
-                    <strong>Dashboard: </strong> <a href="http://127.0.0.1:8797/status" target="_blank">http://127.0.0.1:8797/status</a>
-                </td>
-                <td style="text-align: left;"></td>
-            </tr>
-
-
-        </table>
-
-
-
-
-            <details>
-            <summary style="margin-bottom: 20px;"><h3 style="display: inline;">Cluster Info</h3></summary>
-            <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
-    <div style="width: 24px; height: 24px; background-color: #e1e1e1; border: 3px solid #9D9D9D; border-radius: 5px; position: absolute;">
-    </div>
-    <div style="margin-left: 48px;">
-        <h3 style="margin-bottom: 0px; margin-top: 0px;">LocalCluster</h3>
-        <p style="color: #9D9D9D; margin-bottom: 0px;">777e96fd</p>
-        <table style="width: 100%; text-align: left;">
-            <tr>
-                <td style="text-align: left;">
-                    <strong>Dashboard:</strong> <a href="http://127.0.0.1:8797/status" target="_blank">http://127.0.0.1:8797/status</a>
-                </td>
-                <td style="text-align: left;">
-                    <strong>Workers:</strong> 5
-                </td>
-            </tr>
-            <tr>
-                <td style="text-align: left;">
-                    <strong>Total threads:</strong> 5
-                </td>
-                <td style="text-align: left;">
-                    <strong>Total memory:</strong> 9.31 GiB
-                </td>
-            </tr>
-
-            <tr>
-    <td style="text-align: left;"><strong>Status:</strong> running</td>
-    <td style="text-align: left;"><strong>Using processes:</strong> True</td>
-</tr>
-
-
-        </table>
-
-        <details>
-            <summary style="margin-bottom: 20px;">
-                <h3 style="display: inline;">Scheduler Info</h3>
-            </summary>
-
-            <div style="">
-    <div>
-        <div style="width: 24px; height: 24px; background-color: #FFF7E5; border: 3px solid #FF6132; border-radius: 5px; position: absolute;"> </div>
-        <div style="margin-left: 48px;">
-            <h3 style="margin-bottom: 0px;">Scheduler</h3>
-            <p style="color: #9D9D9D; margin-bottom: 0px;">Scheduler-86235227-1032-4660-84e7-06500b9a7403</p>
-            <table style="width: 100%; text-align: left;">
-                <tr>
-                    <td style="text-align: left;">
-                        <strong>Comm:</strong> tcp://127.0.0.1:36001
-                    </td>
-                    <td style="text-align: left;">
-                        <strong>Workers:</strong> 5
-                    </td>
-                </tr>
-                <tr>
-                    <td style="text-align: left;">
-                        <strong>Dashboard:</strong> <a href="http://127.0.0.1:8797/status" target="_blank">http://127.0.0.1:8797/status</a>
-                    </td>
-                    <td style="text-align: left;">
-                        <strong>Total threads:</strong> 5
-                    </td>
-                </tr>
-                <tr>
-                    <td style="text-align: left;">
-                        <strong>Started:</strong> Just now
-                    </td>
-                    <td style="text-align: left;">
-                        <strong>Total memory:</strong> 9.31 GiB
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </div>
-
-    <details style="margin-left: 48px;">
-        <summary style="margin-bottom: 20px;">
-            <h3 style="display: inline;">Workers</h3>
-        </summary>
-
-
-        <div style="margin-bottom: 20px;">
-            <div style="width: 24px; height: 24px; background-color: #DBF5FF; border: 3px solid #4CC9FF; border-radius: 5px; position: absolute;"> </div>
-            <div style="margin-left: 48px;">
-            <details>
-                <summary>
-                    <h4 style="margin-bottom: 0px; display: inline;">Worker: 0</h4>
-                </summary>
-                <table style="width: 100%; text-align: left;">
-                    <tr>
-                        <td style="text-align: left;">
-                            <strong>Comm: </strong> tcp://127.0.0.1:41165
-                        </td>
-                        <td style="text-align: left;">
-                            <strong>Total threads: </strong> 1
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: left;">
-                            <strong>Dashboard: </strong> <a href="http://127.0.0.1:44423/status" target="_blank">http://127.0.0.1:44423/status</a>
-                        </td>
-                        <td style="text-align: left;">
-                            <strong>Memory: </strong> 1.86 GiB
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: left;">
-                            <strong>Nanny: </strong> tcp://127.0.0.1:45327
-                        </td>
-                        <td style="text-align: left;"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" style="text-align: left;">
-                            <strong>Local directory: </strong> /tmp/dask-worker-space/worker-9_sbozo8
-                        </td>
-                    </tr>
-
-
-
-
-
-                </table>
-            </details>
-            </div>
-        </div>
-
-        <div style="margin-bottom: 20px;">
-            <div style="width: 24px; height: 24px; background-color: #DBF5FF; border: 3px solid #4CC9FF; border-radius: 5px; position: absolute;"> </div>
-            <div style="margin-left: 48px;">
-            <details>
-                <summary>
-                    <h4 style="margin-bottom: 0px; display: inline;">Worker: 1</h4>
-                </summary>
-                <table style="width: 100%; text-align: left;">
-                    <tr>
-                        <td style="text-align: left;">
-                            <strong>Comm: </strong> tcp://127.0.0.1:39915
-                        </td>
-                        <td style="text-align: left;">
-                            <strong>Total threads: </strong> 1
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: left;">
-                            <strong>Dashboard: </strong> <a href="http://127.0.0.1:44113/status" target="_blank">http://127.0.0.1:44113/status</a>
-                        </td>
-                        <td style="text-align: left;">
-                            <strong>Memory: </strong> 1.86 GiB
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: left;">
-                            <strong>Nanny: </strong> tcp://127.0.0.1:42139
-                        </td>
-                        <td style="text-align: left;"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" style="text-align: left;">
-                            <strong>Local directory: </strong> /tmp/dask-worker-space/worker-hzqh4etj
-                        </td>
-                    </tr>
-
-
-
-
-
-                </table>
-            </details>
-            </div>
-        </div>
-
-        <div style="margin-bottom: 20px;">
-            <div style="width: 24px; height: 24px; background-color: #DBF5FF; border: 3px solid #4CC9FF; border-radius: 5px; position: absolute;"> </div>
-            <div style="margin-left: 48px;">
-            <details>
-                <summary>
-                    <h4 style="margin-bottom: 0px; display: inline;">Worker: 2</h4>
-                </summary>
-                <table style="width: 100%; text-align: left;">
-                    <tr>
-                        <td style="text-align: left;">
-                            <strong>Comm: </strong> tcp://127.0.0.1:42045
-                        </td>
-                        <td style="text-align: left;">
-                            <strong>Total threads: </strong> 1
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: left;">
-                            <strong>Dashboard: </strong> <a href="http://127.0.0.1:44923/status" target="_blank">http://127.0.0.1:44923/status</a>
-                        </td>
-                        <td style="text-align: left;">
-                            <strong>Memory: </strong> 1.86 GiB
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: left;">
-                            <strong>Nanny: </strong> tcp://127.0.0.1:34863
-                        </td>
-                        <td style="text-align: left;"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" style="text-align: left;">
-                            <strong>Local directory: </strong> /tmp/dask-worker-space/worker-g4_9j419
-                        </td>
-                    </tr>
-
-
-
-
-
-                </table>
-            </details>
-            </div>
-        </div>
-
-        <div style="margin-bottom: 20px;">
-            <div style="width: 24px; height: 24px; background-color: #DBF5FF; border: 3px solid #4CC9FF; border-radius: 5px; position: absolute;"> </div>
-            <div style="margin-left: 48px;">
-            <details>
-                <summary>
-                    <h4 style="margin-bottom: 0px; display: inline;">Worker: 3</h4>
-                </summary>
-                <table style="width: 100%; text-align: left;">
-                    <tr>
-                        <td style="text-align: left;">
-                            <strong>Comm: </strong> tcp://127.0.0.1:41109
-                        </td>
-                        <td style="text-align: left;">
-                            <strong>Total threads: </strong> 1
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: left;">
-                            <strong>Dashboard: </strong> <a href="http://127.0.0.1:44331/status" target="_blank">http://127.0.0.1:44331/status</a>
-                        </td>
-                        <td style="text-align: left;">
-                            <strong>Memory: </strong> 1.86 GiB
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: left;">
-                            <strong>Nanny: </strong> tcp://127.0.0.1:41997
-                        </td>
-                        <td style="text-align: left;"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" style="text-align: left;">
-                            <strong>Local directory: </strong> /tmp/dask-worker-space/worker-ggu6155k
-                        </td>
-                    </tr>
-
-
-
-
-
-                </table>
-            </details>
-            </div>
-        </div>
-
-        <div style="margin-bottom: 20px;">
-            <div style="width: 24px; height: 24px; background-color: #DBF5FF; border: 3px solid #4CC9FF; border-radius: 5px; position: absolute;"> </div>
-            <div style="margin-left: 48px;">
-            <details>
-                <summary>
-                    <h4 style="margin-bottom: 0px; display: inline;">Worker: 4</h4>
-                </summary>
-                <table style="width: 100%; text-align: left;">
-                    <tr>
-                        <td style="text-align: left;">
-                            <strong>Comm: </strong> tcp://127.0.0.1:38345
-                        </td>
-                        <td style="text-align: left;">
-                            <strong>Total threads: </strong> 1
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: left;">
-                            <strong>Dashboard: </strong> <a href="http://127.0.0.1:35681/status" target="_blank">http://127.0.0.1:35681/status</a>
-                        </td>
-                        <td style="text-align: left;">
-                            <strong>Memory: </strong> 1.86 GiB
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: left;">
-                            <strong>Nanny: </strong> tcp://127.0.0.1:39341
-                        </td>
-                        <td style="text-align: left;"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" style="text-align: left;">
-                            <strong>Local directory: </strong> /tmp/dask-worker-space/worker-0ycnjvxv
-                        </td>
-                    </tr>
-
-
-
-
-
-                </table>
-            </details>
-            </div>
-        </div>
-
-
-    </details>
-</div>
-
-        </details>
-    </div>
-</div>
-            </details>
-
-
-    </div>
-</div>
-
-
-
-
 ```python
 from sklearn.datasets import make_classification
 from sklearn.svm import SVC
@@ -3119,42 +2191,8 @@ with joblib.parallel_backend('dask'):
 
 
 
-<style>#sk-container-id-1 {color: black;background-color: white;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>GridSearchCV(cv=5,
-             estimator=SVC(gamma=&#x27;auto&#x27;, probability=True, random_state=0),
-             n_jobs=-1,
-             param_grid={&#x27;C&#x27;: [0.001, 0.01, 0.1, 0.5, 1.0, 2.0, 5.0, 10.0],
-                         &#x27;kernel&#x27;: [&#x27;rbf&#x27;, &#x27;poly&#x27;, &#x27;sigmoid&#x27;],
-                         &#x27;shrinking&#x27;: [True, False]})</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" ><label for="sk-estimator-id-1" class="sk-toggleable__label sk-toggleable__label-arrow">GridSearchCV</label><div class="sk-toggleable__content"><pre>GridSearchCV(cv=5,
-             estimator=SVC(gamma=&#x27;auto&#x27;, probability=True, random_state=0),
-             n_jobs=-1,
-             param_grid={&#x27;C&#x27;: [0.001, 0.01, 0.1, 0.5, 1.0, 2.0, 5.0, 10.0],
-                         &#x27;kernel&#x27;: [&#x27;rbf&#x27;, &#x27;poly&#x27;, &#x27;sigmoid&#x27;],
-                         &#x27;shrinking&#x27;: [True, False]})</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" ><label for="sk-estimator-id-2" class="sk-toggleable__label sk-toggleable__label-arrow">estimator: SVC</label><div class="sk-toggleable__content"><pre>SVC(gamma=&#x27;auto&#x27;, probability=True, random_state=0)</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox" ><label for="sk-estimator-id-3" class="sk-toggleable__label sk-toggleable__label-arrow">SVC</label><div class="sk-toggleable__content"><pre>SVC(gamma=&#x27;auto&#x27;, probability=True, random_state=0)</pre></div></div></div></div></div></div></div></div></div></div>
-
-
-
-
-```python
-pd.DataFrame(grid_search.cv_results_).head()
-```
-
-
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -3399,17 +2437,6 @@ X
 km = dask_ml.cluster.KMeans(n_clusters=3, init_max_iter=2, oversampling_factor=10)
 km.fit(X)
 ```
-
-    /usr/local/lib/python3.9/site-packages/dask/base.py:1367: UserWarning: Running on a single-machine scheduler when a distributed client is active might lead to unexpected results.
-      warnings.warn(
-    
-
-
-
-
-<style>#sk-container-id-2 {color: black;background-color: white;}#sk-container-id-2 pre{padding: 0;}#sk-container-id-2 div.sk-toggleable {background-color: white;}#sk-container-id-2 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-2 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-2 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-2 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-2 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-2 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-2 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-2 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-2 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-2 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-2 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-2 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-2 div.sk-item {position: relative;z-index: 1;}#sk-container-id-2 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-2 div.sk-item::before, #sk-container-id-2 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-2 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-2 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-2 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-2 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-2 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-2 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-2 div.sk-label-container {text-align: center;}#sk-container-id-2 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-2 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>KMeans(init_max_iter=2, n_clusters=3, oversampling_factor=10)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-4" type="checkbox" checked><label for="sk-estimator-id-4" class="sk-toggleable__label sk-toggleable__label-arrow">KMeans</label><div class="sk-toggleable__content"><pre>KMeans(init_max_iter=2, n_clusters=3, oversampling_factor=10)</pre></div></div></div></div></div>
-
-
 
 
 ```python
