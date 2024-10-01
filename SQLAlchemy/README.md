@@ -85,19 +85,7 @@ top_cities_data
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -391,19 +379,7 @@ my_data
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -859,50 +835,12 @@ help('pandas.read_csv')
 
 
     7
-
-
-
-
-
-
     3
-
-
-
-
-
-
     10
-
-
-
-
-
-
     2.5
-
-
-
-
-
-
     2
-
-
-
-
-
-
     25
-
-
-
-
-
-
     1
-
-
 
 
 ```python
@@ -916,19 +854,7 @@ help('pandas.read_csv')
 
 
     -5.0
-
-
-
-
-
-
     9
-
-
-
-
-
-
     10
 
 
@@ -944,12 +870,6 @@ help('pandas.read_csv')
 
 
     11
-
-
-
-
-
-
     11
 
 
@@ -966,12 +886,6 @@ type(6.0)
 
 
     int
-
-
-
-
-
-
     float
 
 
@@ -987,12 +901,6 @@ type(5 + 3.14) # convert to a more general form.
 
 
     8.14
-
-
-
-
-
-
     float
 
 
@@ -1008,12 +916,6 @@ float(6)
 
 
     7
-
-
-
-
-
-
     6.0
 
 
@@ -1041,12 +943,7 @@ x = 2
 x + 1
 ```
 
-
-
-
     3
-
-
 
 
 ```python
@@ -1054,12 +951,7 @@ x = 3.0
 x + 1    # c++ won't let you do it since a wrong match.  
 ```
 
-
-
-
     4.0
-
-
 
 
 ```python
@@ -1074,12 +966,6 @@ type(y)
 
 
     int
-
-
-
-
-
-
     float
 
 
@@ -1109,28 +995,9 @@ x
 
 
     4
-
-
-
-
-
-
     4
-
-
-
-
-
-
     2
-
-
-
-
-
-
     15
-
 
 
 
@@ -1183,19 +1050,7 @@ z
 
 
     8
-
-
-
-
-
-
     5
-
-
-
-
-
-
     'cat'
 
 
@@ -1236,12 +1091,6 @@ bookstore
 
 
     'City Lights'
-
-
-
-
-
-
     'City Lights'
 
 
@@ -1368,12 +1217,7 @@ print('The founder of City Lights Bookstore, {}, is now {} years old.'.format(ow
 len(greeting)
 ```
 
-
-
-
     5
-
-
 
 
 ```python
@@ -1397,26 +1241,8 @@ greeting.count('w')
 
 
     'howdy'
-
-
-
-
-
-
     'HOWDY'
-
-
-
-
-
-
     True
-
-
-
-
-
-
     1
 
 
@@ -1434,19 +1260,7 @@ int('5') + int('7')
 
 
     str
-
-
-
-
-
-
     '57'
-
-
-
-
-
-
     12
 
 
@@ -1482,26 +1296,8 @@ destination[7]
 
 
     'C'
-
-
-
-
-
-
     'o'
-
-
-
-
-
-
     'n'
-
-
-
-
-
-
     ' '
 
 
@@ -1532,12 +1328,6 @@ destination[-3:]
 
 
     'College St'
-
-
-
-
-
-
     'ion'
 
 
@@ -1585,33 +1375,9 @@ not (over_21 or (over_21 or over_18)) #parentheses matter
 
 
     False
-
-
-
-
-
-
     True
-
-
-
-
-
-
     False
-
-
-
-
-
-
     True
-
-
-
-
-
-
     False
 
 
@@ -1632,33 +1398,9 @@ age >= 20 and age <= 21 #combine with logical operators
 
 
     False
-
-
-
-
-
-
     True
-
-
-
-
-
-
     True
-
-
-
-
-
-
     False
-
-
-
-
-
-
     True
 
 
@@ -1678,12 +1420,6 @@ age >= 20 and age <= 21 #combine with logical operators
 
 
     True
-
-
-
-
-
-
     False
 
 
@@ -1716,12 +1452,6 @@ age=20
 
 
     True
-
-
-
-
-
-
     False
 
 
