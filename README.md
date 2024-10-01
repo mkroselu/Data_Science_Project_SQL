@@ -1,11 +1,11 @@
 # STAT624_Computing-Tools-for-Data-Science 
 
-|Labs    |  
+|Topics    |  
 |:------:|
-|[Lab02](Lab02/README.md)|
-|[Lab03](Lab03/README.md)|
-|[Lab04](Lab04/README.md)|
-|[Lab05](Lab05/README.md)|
-|[Lab06](Lab06/README.md)|
-|[Lab07](Lab07/README.md)|
-|[Final Project](Final_Project/README.md)|
+|[DataVisualization](DataVisualization/README.md)|
+|[Parallelization](Parallelization_with_Dask/README.md)|
+|[DataScience](Python_for_data_science/README.md)|
+|[SQL](SQLAlchemy/README.md)|
+|[VizAssignment](VizAssignment/README.md)|
+|[DataStructure](data_structure/README.md)|
+
