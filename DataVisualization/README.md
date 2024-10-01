@@ -30,27 +30,9 @@ plt.show()
 plt.show
 
 ```
-
-
-
-
-    <matplotlib.collections.PathCollection at 0x7f3e53136198>
-
-
-
-
     
 ![png](output_4_1.png)
     
-
-
-
-
-
-    <function matplotlib.pyplot.show(close=None, block=None)>
-
-
-
 
 ```python
 plt.title('Ice-cream sales versus Temperature')
@@ -59,35 +41,6 @@ plt.ylabel('Sales')
 plt.scatter(temperature, sales, color='red')
 plt.show()
 ```
-
-
-
-
-    Text(0.5, 1.0, 'Ice-cream sales versus Temperature')
-
-
-
-
-
-
-    Text(0.5, 0, 'Temperature')
-
-
-
-
-
-
-    Text(0, 0.5, 'Sales')
-
-
-
-
-
-
-    <matplotlib.collections.PathCollection at 0x7f3e497d0400>
-
-
-
 
     
 ![png](output_5_4.png)
@@ -114,34 +67,6 @@ plt.show()
 ```
 
 
-
-
-    [<matplotlib.lines.Line2D at 0x7f3e49751240>]
-
-
-
-
-
-
-    Text(0.5, 1.0, 'Opening Stock Prices')
-
-
-
-
-
-
-    Text(0.5, 0, 'Days')
-
-
-
-
-
-
-    Text(0, 0.5, '$ USD')
-
-
-
-
     
 ![png](output_8_4.png)
     
@@ -158,30 +83,6 @@ plt.plot(t, stock_price, marker='.', color='red')
 plt.xticks([1, 8, 15, 22, 28])
 plt.show()
 ```
-
-
-
-
-    [<matplotlib.lines.Line2D at 0x7f3e496ce860>]
-
-
-
-
-
-
-    ([<matplotlib.axis.XTick at 0x7f3e49716f28>,
-      <matplotlib.axis.XTick at 0x7f3e4972a048>,
-      <matplotlib.axis.XTick at 0x7f3e497167b8>,
-      <matplotlib.axis.XTick at 0x7f3e496e2080>,
-      <matplotlib.axis.XTick at 0x7f3e496e2160>],
-     [Text(0, 0, ''),
-      Text(0, 0, ''),
-      Text(0, 0, ''),
-      Text(0, 0, ''),
-      Text(0, 0, '')])
-
-
-
 
     
 ![png](output_10_2.png)
@@ -202,19 +103,9 @@ students_count = [20, 30, 10, 5, 8, 2]
 ```python
 plt.bar(grades, students_count, color=['green', 'gray', 'gray', 'gray', 'gray', 'red'])
 ```
-
-
-
-
-    <BarContainer object of 6 artists>
-
-
-
-
     
 ![png](output_13_1.png)
     
-
 
 
 ```python
@@ -224,53 +115,13 @@ plt.ylabel('Num Students')
 plt.bar(grades, students_count, color=['green', 'gray', 'gray', 'gray', 'gray', 'red'])
 plt.show()
 ```
-
-
-
-
-    Text(0.5, 1.0, 'Grades Bar Plot for Biology Class')
-
-
-
-
-
-
-    Text(0.5, 0, 'Grade')
-
-
-
-
-
-
-    Text(0, 0.5, 'Num Students')
-
-
-
-
-
-
-    <BarContainer object of 6 artists>
-
-
-
-
     
 ![png](output_14_4.png)
     
 
-
-
 ```python
 plt.barh(grades, students_count, color=['green', 'gray', 'gray', 'gray', 'gray', 'red']) # maybe used in long category names
 ```
-
-
-
-
-    <BarContainer object of 6 artists>
-
-
-
 
     
 ![png](output_15_1.png)
@@ -291,57 +142,15 @@ num = [230, 100, 98] # Note that this does not need to be percentages
 ```python
 plt.pie(num, labels=labels, autopct='%1.1f%%', colors=['lightblue', 'lightgreen', 'yellow'])
 ```
-
-
-
-
-    ([<matplotlib.patches.Wedge at 0x7f3e49530320>,
-      <matplotlib.patches.Wedge at 0x7f3e49530940>,
-      <matplotlib.patches.Wedge at 0x7f3e4953f080>],
-     [Text(-0.12889029014495987, 1.0924226714538416, 'Monica'),
-      Text(-0.6228249215772513, -0.906691301966822, 'Adrian'),
-      Text(0.8274673515900017, -0.7247742973178813, 'Jared')],
-     [Text(-0.07030379462452356, 0.5958669117020954, '53.7%'),
-      Text(-0.33972268449668247, -0.49455889198190284, '23.4%'),
-      Text(0.4513458281400009, -0.3953314349006625, '22.9%')])
-
-
-
-
     
 ![png](output_18_1.png)
     
-
-
 
 ```python
 plt.title('Voting Results: Club President', fontdict={'fontsize': 20})
 plt.pie(num, labels=labels, autopct='%1.1f%%', colors=['lightblue', 'lightgreen', 'yellow'])
 plt.show()
 ```
-
-
-
-
-    Text(0.5, 1.0, 'Voting Results: Club President')
-
-
-
-
-
-
-    ([<matplotlib.patches.Wedge at 0x7f3e49493080>,
-      <matplotlib.patches.Wedge at 0x7f3e494937b8>,
-      <matplotlib.patches.Wedge at 0x7f3e49493eb8>],
-     [Text(-0.12889029014495987, 1.0924226714538416, 'Monica'),
-      Text(-0.6228249215772513, -0.906691301966822, 'Adrian'),
-      Text(0.8274673515900017, -0.7247742973178813, 'Jared')],
-     [Text(-0.07030379462452356, 0.5958669117020954, '53.7%'),
-      Text(-0.33972268449668247, -0.49455889198190284, '23.4%'),
-      Text(0.4513458281400009, -0.3953314349006625, '22.9%')])
-
-
-
 
     
 ![png](output_19_2.png)
@@ -453,18 +262,6 @@ data = [90, 80, 50, 42, 89, 78, 34, 70, 67, 73, 74, 80, 60, 90, 90]
 sns.distplot(data)
 ```
 
-    /usr/local/lib/python3.7/site-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
-      warnings.warn(msg, FutureWarning)
-    
-
-
-
-
-    <AxesSubplot:ylabel='Density'>
-
-
-
-
     
 ![png](output_27_2.png)
     
@@ -478,39 +275,6 @@ plt.ylabel('Density')
 sns.distplot(data)
 plt.show()
 ```
-
-
-
-
-    Text(0.5, 1.0, 'Density Plot')
-
-
-
-
-
-
-    Text(0.5, 0, 'Score')
-
-
-
-
-
-
-    Text(0, 0.5, 'Density')
-
-
-
-    /usr/local/lib/python3.7/site-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
-      warnings.warn(msg, FutureWarning)
-    
-
-
-
-
-    <AxesSubplot:title={'center':'Density Plot'}, xlabel='Score', ylabel='Density'>
-
-
-
 
     
 ![png](output_28_5.png)
@@ -532,39 +296,6 @@ plt.xlabel('weight (kg)')
 sns.kdeplot(weight, height, cmap="Reds", ) # cmap = color map 
 ```
 
-
-
-
-    Text(0.5, 1.0, 'Weight Dataset - Contour Plot')
-
-
-
-
-
-
-    Text(0, 0.5, 'height (cm)')
-
-
-
-
-
-
-    Text(0.5, 0, 'weight (kg)')
-
-
-
-    /usr/local/lib/python3.7/site-packages/seaborn/_decorators.py:43: FutureWarning: Pass the following variable as a keyword arg: y. From version 0.12, the only valid positional argument will be `data`, and passing other arguments without an explicit keyword will result in an error or misinterpretation.
-      FutureWarning
-    
-
-
-
-
-    <AxesSubplot:title={'center':'Weight Dataset - Contour Plot'}, xlabel='weight (kg)', ylabel='height (cm)'>
-
-
-
-
     
 ![png](output_30_5.png)
     
@@ -580,49 +311,22 @@ penguins = sns.load_dataset("penguins")
 sns.displot(penguins, x="flipper_length_mm")
 ```
 
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x7f3e46f0b0b8>
-
-
-
-
     
 ![png](output_32_1.png)
     
 
-
-
 ```python
 sns.displot(penguins, x="flipper_length_mm", hue="species")
 ```
-
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x7f3e450c5198>
-
-
-
 
     
 ![png](output_33_1.png)
     
 
 
-
 ```python
 sns.displot(penguins, x="flipper_length_mm", hue="species", element="step")
 ```
-
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x7f3e44f2c4a8>
-
-
-
 
     
 ![png](output_34_1.png)
@@ -635,13 +339,6 @@ sns.displot(penguins, x="flipper_length_mm", hue="species", multiple="stack")
 ```
 
 
-
-
-    <seaborn.axisgrid.FacetGrid at 0x7f3e44ebd0b8>
-
-
-
-
     
 ![png](output_35_1.png)
     
@@ -652,14 +349,6 @@ sns.displot(penguins, x="flipper_length_mm", hue="species", multiple="stack")
 sns.displot(penguins, x="flipper_length_mm", kind="kde")
 ```
 
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x7f3e44e2ffd0>
-
-
-
-
     
 ![png](output_36_1.png)
     
@@ -669,15 +358,6 @@ sns.displot(penguins, x="flipper_length_mm", kind="kde")
 ```python
 sns.displot(penguins, x="flipper_length_mm", kind="kde", bw_adjust=.25) # kde: kernel density estimate # bw: bandwidth 
 ```
-
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x7f3e44f130f0>
-
-
-
-
     
 ![png](output_37_1.png)
     
@@ -687,14 +367,6 @@ sns.displot(penguins, x="flipper_length_mm", kind="kde", bw_adjust=.25) # kde: k
 ```python
 sns.displot(penguins, x="flipper_length_mm", hue="species", kind="kde")
 ```
-
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x7f3e44fe8b00>
-
-
-
 
     
 ![png](output_38_1.png)
@@ -706,15 +378,6 @@ sns.displot(penguins, x="flipper_length_mm", hue="species", kind="kde")
 diamonds = sns.load_dataset("diamonds")
 sns.displot(diamonds, x="carat", kde=True)
 ```
-
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x7f3e44d38d68>
-
-
-
-
     
 ![png](output_39_1.png)
     
@@ -729,15 +392,6 @@ sns.displot(penguins, x="bill_length_mm", y="bill_depth_mm")
 # color is really helpful for identifying clusters. 
 # so if your purpose is these three species are quite different and cluster together, this plot is fine. 
 ```
-
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x7f3e44b75eb8>
-
-
-
-
     
 ![png](output_40_1.png)
     
@@ -748,15 +402,6 @@ sns.displot(penguins, x="bill_length_mm", y="bill_depth_mm")
 # but if you want to make more accurate comparisons of distribution, you can add color bar helping a little but not tremendously. 
 sns.displot(penguins, x="bill_length_mm", y="bill_depth_mm", binwidth=(2, .5), cbar=True)
 ```
-
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x7f3e49471cf8>
-
-
-
-
     
 ![png](output_41_1.png)
     
@@ -767,14 +412,6 @@ sns.displot(penguins, x="bill_length_mm", y="bill_depth_mm", binwidth=(2, .5), c
 # or you can do a contour plot 
 sns.displot(penguins, x="bill_length_mm", y="bill_depth_mm", kind="kde")
 ```
-
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x7f3e44b03240>
-
-
-
 
     
 ![png](output_42_1.png)
@@ -787,14 +424,6 @@ sns.displot(penguins, x="bill_length_mm", y="bill_depth_mm", kind="kde")
 sns.displot(penguins, x="bill_length_mm", y="bill_depth_mm", hue="species")
 ```
 
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x7f3e44b035c0>
-
-
-
-
     
 ![png](output_43_1.png)
     
@@ -805,14 +434,6 @@ sns.displot(penguins, x="bill_length_mm", y="bill_depth_mm", hue="species")
 sns.displot(penguins, x="bill_length_mm", y="bill_depth_mm", kind="kde", thresh=.2, levels=4)
 ```
 
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x7f3e447ac0f0>
-
-
-
-
     
 ![png](output_44_1.png)
     
@@ -822,14 +443,6 @@ sns.displot(penguins, x="bill_length_mm", y="bill_depth_mm", kind="kde", thresh=
 ```python
 sns.displot(penguins, x="bill_length_mm", y="bill_depth_mm", hue="species", kind="kde")
 ```
-
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x7f3e446b1550>
-
-
-
 
     
 ![png](output_45_1.png)
@@ -842,14 +455,6 @@ sns.displot(penguins, x="bill_length_mm", y="bill_depth_mm", hue="species", kind
 # if you want all information in one plot, this will do the trick. 
 sns.jointplot(data=penguins, x="bill_length_mm", y="bill_depth_mm")
 ```
-
-
-
-
-    <seaborn.axisgrid.JointGrid at 0x7f3e445c4588>
-
-
-
 
     
 ![png](output_46_1.png)
@@ -865,15 +470,6 @@ sns.jointplot(
 )
 ```
 
-
-
-
-    <seaborn.axisgrid.JointGrid at 0x7f3e443760b8>
-
-
-
-
-    
 ![png](output_47_1.png)
     
 
@@ -885,22 +481,6 @@ g = sns.JointGrid(data=penguins, x="bill_length_mm", y="bill_depth_mm")
 g.plot_joint(sns.histplot)
 g.plot_marginals(sns.boxplot)
 ```
-
-
-    ---------------------------------------------------------------------------
-
-    AttributeError                            Traceback (most recent call last)
-
-    /tmp/ipykernel_47/2320725784.py in <module>
-          1 # boxplot with kde
-          2 g = sns.JointGrid(data=penguins, x="bill_length_mm", y="bill_depth_mm")
-    ----> 3 g.plot_joint(sns.hisplot)
-          4 g.plot_marginals(sns.boxplot)
-    
-
-    AttributeError: module 'seaborn' has no attribute 'hisplot'
-
-
 
     
 ![png](output_48_1.png)
@@ -921,27 +501,6 @@ sns.relplot(data=penguins, x="bill_length_mm", y="bill_depth_mm")
 sns.rugplot(data=penguins, x="bill_length_mm", y="bill_depth_mm")
 ```
 
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x149dc732790>
-
-
-
-
-    ---------------------------------------------------------------------------
-
-    TypeError                                 Traceback (most recent call last)
-
-    <ipython-input-35-2c6444b97e79> in <module>
-          1 sns.relplot(data=penguins, x="bill_length_mm", y="bill_depth_mm")
-    ----> 2 sns.rugplot(data=penguins, x="bill_length_mm", y="bill_depth_mm")
-    
-
-    TypeError: rugplot() missing 1 required positional argument: 'a'
-
-
-
     
 ![png](output_50_2.png)
     
@@ -953,15 +512,6 @@ sns.rugplot(data=penguins, x="bill_length_mm", y="bill_depth_mm")
 # Univariate distributions along the diagonal and scatter plot of bivariate variable distributions for all variables. 
 sns.pairplot(penguins)
 ```
-
-
-
-
-    <seaborn.axisgrid.PairGrid at 0x149db39a970>
-
-
-
-
     
 ![png](output_51_1.png)
     
@@ -974,28 +524,6 @@ g.map_upper(sns.histplot)
 g.map_lower(sns.kdeplot, fill=True)
 g.map_diag(sns.histplot, kde=True)
 ```
-
-
-
-
-    <seaborn.axisgrid.PairGrid at 0x7f3e440ac1d0>
-
-
-
-
-
-
-    <seaborn.axisgrid.PairGrid at 0x7f3e440ac1d0>
-
-
-
-
-
-
-    <seaborn.axisgrid.PairGrid at 0x7f3e440ac1d0>
-
-
-
 
     
 ![png](output_52_3.png)
@@ -1025,64 +553,6 @@ ax2.set_ylabel('Votes')
 fig.suptitle('Voting Results', size=14)
 ```
 
-
-
-
-    ([<matplotlib.patches.Wedge at 0x7f3e4413b320>,
-      <matplotlib.patches.Wedge at 0x7f3e4413b940>,
-      <matplotlib.patches.Wedge at 0x7f3e44130080>],
-     [Text(-0.12889029014495987, 1.0924226714538416, 'Adrian'),
-      Text(-0.6228249215772513, -0.906691301966822, 'Monica'),
-      Text(0.8274673515900017, -0.7247742973178813, 'Jared')],
-     [Text(-0.07030379462452356, 0.5958669117020954, '53.7%'),
-      Text(-0.33972268449668247, -0.49455889198190284, '23.4%'),
-      Text(0.4513458281400009, -0.3953314349006625, '22.9%')])
-
-
-
-
-
-
-    Text(0.5, 1.0, 'Pie Chart (Subplot 1)')
-
-
-
-
-
-
-    <BarContainer object of 3 artists>
-
-
-
-
-
-
-    Text(0.5, 1.0, 'Bar Chart (Subplot 2)')
-
-
-
-
-
-
-    Text(0.5, 0, 'Candidate')
-
-
-
-
-
-
-    Text(0, 0.5, 'Votes')
-
-
-
-
-
-
-    Text(0.5, 0.98, 'Voting Results')
-
-
-
-
     
 ![png](output_54_7.png)
     
@@ -1109,43 +579,6 @@ ax.set_xlabel('X')
 ax.set_ylabel('Y')
 ax.set_zlabel('Z')
 ```
-
-
-
-
-    <mpl_toolkits.mplot3d.art3d.Poly3DCollection at 0x7f3e441be898>
-
-
-
-
-
-
-    Text(0.5, 0.92, 'Demo of 3D Plot')
-
-
-
-
-
-
-    Text(0.5, 0, 'X')
-
-
-
-
-
-
-    Text(0.5, 0.5, 'Y')
-
-
-
-
-
-
-    Text(0.5, 0, 'Z')
-
-
-
-
     
 ![png](output_56_5.png)
     
