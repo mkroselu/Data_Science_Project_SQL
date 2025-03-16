@@ -1,4 +1,4 @@
-# Group Assignment: Data Preparation and Visualization
+# Data Preparation and Visualization
 
 ### Instructions: 
 You will be presented with a scenario and will need to utilize your SQL and python skills to complete this assignment successfully. 
